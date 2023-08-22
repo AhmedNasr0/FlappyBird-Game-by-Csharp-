@@ -45,7 +45,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.back;
+            pictureBox1.Image = Properties.Resources.background;
             pictureBox1.Location = new Point(-8, -123);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(752, 583);
@@ -56,7 +56,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.MediumTurquoise;
+            pictureBox2.BackColor = Color.PaleTurquoise;
             pictureBox2.Image = Properties.Resources.flappybird;
             pictureBox2.Location = new Point(132, 27);
             pictureBox2.Name = "pictureBox2";
@@ -67,8 +67,8 @@
             // 
             // My_bird
             // 
-            My_bird.BackColor = Color.MediumTurquoise;
-            My_bird.Image = Properties.Resources.mm;
+            My_bird.BackColor = Color.PaleTurquoise;
+            My_bird.Image = Properties.Resources.bird1;
             My_bird.Location = new Point(343, 135);
             My_bird.Name = "My_bird";
             My_bird.Size = new Size(65, 61);

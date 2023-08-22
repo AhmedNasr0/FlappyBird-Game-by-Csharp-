@@ -50,6 +50,7 @@
             Note_Panel = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            Back_label = new Label();
             ((System.ComponentModel.ISupportInitialize)pipedown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pipeup).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Bird).BeginInit();
@@ -90,7 +91,7 @@
             // Bird
             // 
             Bird.BackColor = Color.Transparent;
-            Bird.Image = Properties.Resources.bird3;
+            Bird.Image = (Image)resources.GetObject("Bird.Image");
             Bird.Location = new Point(130, 200);
             Bird.Name = "Bird";
             Bird.Size = new Size(51, 52);
@@ -144,7 +145,7 @@
             press.AutoSize = true;
             press.BackColor = Color.PaleGoldenrod;
             press.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            press.Location = new Point(383, 387);
+            press.Location = new Point(383, 366);
             press.Name = "press";
             press.Size = new Size(304, 27);
             press.TabIndex = 8;
@@ -155,7 +156,7 @@
             PlayAgain.AutoSize = true;
             PlayAgain.BackColor = Color.PaleGoldenrod;
             PlayAgain.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            PlayAgain.Location = new Point(383, 326);
+            PlayAgain.Location = new Point(383, 316);
             PlayAgain.Name = "PlayAgain";
             PlayAgain.Size = new Size(304, 27);
             PlayAgain.TabIndex = 9;
@@ -249,21 +250,21 @@
             Note_Panel.Controls.Add(pictureBox1);
             Note_Panel.Location = new Point(748, 200);
             Note_Panel.Name = "Note_Panel";
-            Note_Panel.Size = new Size(222, 162);
+            Note_Panel.Size = new Size(222, 143);
             Note_Panel.TabIndex = 18;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(17, 115);
+            label1.Location = new Point(33, 115);
             label1.Name = "label1";
-            label1.Size = new Size(189, 40);
+            label1.Size = new Size(150, 20);
             label1.TabIndex = 1;
-            label1.Text = "Use KeyUp To Go Up \r\nAnd KeyDown To Go Down";
+            label1.Text = "Use KeyUp To Go Up \r\n";
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.Arrow_keys_UP_DOWN;
             pictureBox1.Location = new Point(54, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(114, 109);
@@ -271,11 +272,23 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // Back_label
+            // 
+            Back_label.AutoSize = true;
+            Back_label.BackColor = Color.PaleGoldenrod;
+            Back_label.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Back_label.Location = new Point(368, 420);
+            Back_label.Name = "Back_label";
+            Back_label.Size = new Size(330, 27);
+            Back_label.TabIndex = 19;
+            Back_label.Text = "press (B) To Go To Start Page >>";
+            // 
             // PlayGame
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 553);
+            Controls.Add(Back_label);
             Controls.Add(Note_Panel);
             Controls.Add(Bird);
             Controls.Add(sun);
@@ -340,5 +353,6 @@
         private Panel Note_Panel;
         private Label label1;
         private PictureBox pictureBox1;
+        private Label Back_label;
     }
 }

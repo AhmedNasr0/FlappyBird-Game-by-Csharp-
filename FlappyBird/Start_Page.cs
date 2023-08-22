@@ -36,9 +36,10 @@ namespace FlappyBird
 
 
         }
-        
+
         private void button2_Click(object sender, EventArgs e)
-        {PlayGame playgame = new PlayGame(this);
+        {
+            PlayGame playgame = new PlayGame(this);
             playgame.ShowDialog();
         }
 
@@ -54,7 +55,7 @@ namespace FlappyBird
 
         private void choosebird_btn_Click(object sender, EventArgs e)
         {
-            Choose_Bird choose_Bird=new Choose_Bird(this);
+            Choose_Bird choose_Bird = new Choose_Bird(this);
             choose_Bird.ShowDialog();
         }
     }

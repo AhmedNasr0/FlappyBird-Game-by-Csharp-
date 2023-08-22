@@ -12,7 +12,7 @@ namespace FlappyBird
             InitializeComponent();
             Bird.Image = startpage.My_bird.Image;
         }
-        SoundPlayer gameover_soundPlayer = new SoundPlayer("C:\\Users\\Ahmed Nasr\\Downloads\\gameover_1.wav");     
+        SoundPlayer gameover_soundPlayer = new SoundPlayer("C:\\Users\\Ahmed Nasr\\Downloads\\gameover_1.wav");
         // start of variables
         int gravity = 5;
         int speed = 3;
@@ -85,7 +85,7 @@ namespace FlappyBird
         {
             if (Score <= 5) { speed = 5; }
             if (Score > 5 && Score <= 10) speed = 10;
-            
+
 
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -109,8 +109,17 @@ namespace FlappyBird
             {
                 reset();
             }
+            if (e.KeyCode == Keys.B)         // When Player  Click B => Go Back To Start Page 
+            {
+                Back_To_StartPage();
+            }
 
 
+        }
+        private void Back_To_StartPage()
+        {
+            startpage.Show();
+            this.Close();
         }
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -127,6 +136,7 @@ namespace FlappyBird
             gameover_soundPlayer.Play();
             gameover.Visible = true;
             PlayAgain.Visible = true;
+            Back_label.Visible = true;
         }
 
 
@@ -139,6 +149,7 @@ namespace FlappyBird
             gameover.Visible = false;
             PlayAgain.Visible = false;
             Note_Panel.Visible = false;
+            Back_label.Visible = false;
             press.Visible = true;
             Bird.Location = new Point(100, 50);
             pipedown.Left = 1100;
